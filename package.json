@@ -25,7 +25,7 @@
     "commit": "./node_modules/.bin/git-cz",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:prod": "cross-env NODE_ENV=production ./node_modules/.bin/webpack-dev-server --port 3000",
-    "start": "node server.js",
+    "start": "cross-env NODE_ENV=homolog ./node_modules/.bin/webpack-dev-server --port 3000",
     "start:local": "cross-env NODE_ENV=local ./node_modules/.bin/webpack-dev-server --port 3000",
     "build": "cross-env NODE_ENV=production webpack",
     "build:hmg": "cross-env NODE_ENV=homolog webpack",
@@ -45,7 +45,7 @@
     "babel-preset-env": "^1.1.8",
     "babel-preset-es2015": "^6.18.0",
     "commitizen": "^2.9.6",
-    "cross-env": "^5.1.3",
+    
     "css-loader": "^0.26.1",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.16.0",
@@ -74,6 +74,7 @@
     }
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "cross-env": "^5.1.3"
   }
 }
